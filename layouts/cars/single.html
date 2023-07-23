@@ -83,8 +83,17 @@
 
     {{ .Content }}
   </article>
-
+  {{ partial "cta-car.html" 
+  (dict 
+  "prompt" "Voglio quest'auto!" 
+  "message" "Uno dei nostri agenti ti contatterà al più presto per fornirti un preventivo personalizzato" 
+  "button" "Contattami"
+  "context" .)
+  }}
   {{- partial "comments.html" . -}}
 
   {{- partial "social.html" . -}}
+  
 {{ end }}
+
+

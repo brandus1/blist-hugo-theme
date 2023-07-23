@@ -13,6 +13,7 @@ module.exports = {
       "exampleSite/layouts/**/*.html",
       "exampleSite/config.toml",
       "exampleSite/content/**/*.html",
+      "../node_modules/flowbite/**/*.js"
     ],
   },
   darkMode: "class",
@@ -106,5 +107,6 @@ module.exports = {
       typography: ["dark"],
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [require("@tailwindcss/typography"),
+            require('flowbite/plugin')],
 };

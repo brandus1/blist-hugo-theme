@@ -25,5 +25,9 @@
     "> 1%",
     "maintained node versions",
     "not dead"
-  ]
+  ],
+  "dependencies": {
+    "flowbite": "^1.7.0",
+    "netlify-cli": "^15.9.1"
+  }
 }
