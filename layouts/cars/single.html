@@ -2,11 +2,13 @@
   {{ $lastmodstr := (partial "date.html" (dict "date" .Lastmod "language" $.Page.Language "format" "long")) }}
   {{ $datestr := (partial "date.html" (dict "date" .Date "language" $.Page.Language "format" "long")) }}
 
+  {{ $offer := .Params.offer }}
   {{ with .Params.featured_image }}
   {{ with resources.Get .}}
   {{ $postimage := (.Resize "600x webp q90").RelPermalink }}
   <div class="relative max-w-5xl mx-auto px-4">
     <img src="{{ $postimage }}" class="rounded-lg shadow-sm w-full object-contain" />
+    <div class="absolute top-0 left-0 bg-yellow-500 text-white px-2 py-1 rounded-tr-lg rounded-bl-lg font-bold">Offerta per: {{ $offer }}</div>
   {{ end }}
   {{ end }}
 
