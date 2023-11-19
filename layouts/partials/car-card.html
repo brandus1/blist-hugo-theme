@@ -1,9 +1,11 @@
 <div class="p-2">
 <a href="{{ .Permalink }}">
+  {{ $offer := .Params.offer }}
   {{ with .Params.featured_image }}
   {{ with resources.Get . }}
   {{ $postimage := (.Resize "600x webp q90").RelPermalink }}
   <div class="relative">
+    <div class="absolute top-0 left-0 bg-yellow-400 dark:text-white px-2 py-1 rounded-tr-lg rounded-bl-lg font-bold">{{ $offer }}</div>
     <img src="{{ $postimage }}" alt="{{ .Params.title }}" class="rounded-lg shadow-sm w-full h-52 object-cover" />
   </div>
   {{ end }}
