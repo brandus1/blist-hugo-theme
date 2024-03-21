@@ -29,6 +29,12 @@
         <h3 class="text-lg font-bold mb-2">{{ .Params.car_type }}</h3>
         <p >Alimentazione</p>
       </div>
+      {{ if .Params.fee }}
+        <div class="bg-yellow-200 dark:bg-gray-200 p-4 rounded-lg shadow-sm">
+          <h3 class="text-lg font-bold mb-2">{{ .Params.fee }} €</h3>
+          <p >Diritti di agenzia</p>
+        </div>
+      {{ end }}
     </div>
   </div>
 
